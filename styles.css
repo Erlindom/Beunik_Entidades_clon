@@ -1,0 +1,436 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Encode Sans', sans-serif;
+    --blanco: #ffffff;
+    --azul_claro: #459ad3;
+    --azul_opaco: #308ecd;
+    --gris: #cccccc;
+    --color-parrafo: #828282;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+
+/* Header & Nav */
+.header {
+    background-image: url(img/Header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+    height: 90%;
+    border-radius: 0% 100% 227% 83% / 100% 0% 65% 13%;
+}
+/* Hamburger nav*/
+.contenedor_hamburger {
+    display: flex;
+    justify-content: end;
+}
+
+.hamburger {
+    position: fixed;
+    display: none;
+    width: 60px;
+    height: 60px;
+    border: none;
+    margin: 15px;
+    z-index: 1;
+    background: var(--azul_claro);
+    border-radius: 50%;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--blanco);
+    margin: 4px auto;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.navegacion.is-active {
+    left: 0;
+}
+/* Hamburger nav*/
+
+.navegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.scroll_nav {
+    background: rgba(60,123,213,255);
+}
+
+.logo {
+    width: 200px;
+}
+
+.contenedor_nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav_links {
+    color: var(--blanco);
+    font-size: 11px;
+    letter-spacing: 1px;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all 0.3s;
+    padding: 7px;
+    text-transform: uppercase;
+}
+
+.nav_links:hover, .nav_links:focus {
+    background-size: 100% 2px;
+}
+
+.icon {
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+.header_texto {
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+.titulo_header {
+    font-size: 40px;
+    margin: 0;
+}
+
+.parrafo_header {
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+}
+
+.boton {
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 150px;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.boton_1 {
+    border: 1px solid var(--blanco);
+}
+
+.boton_2 {
+    transition: all 0.2s;
+    background-color: var(--azul_claro);
+}
+
+.boton_2:hover {
+    background-color: var(--azul_opaco);
+}
+
+
+/* Dimension contenedor */
+.contenedor {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+/* Contenido Principal */
+.caracteristicas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.padding_nav {
+    padding-top: 90px;
+}
+
+.color_titulos { /* Reutlizar color de titulos*/
+    color: var(--azul_opaco);
+}
+
+.color_p { /* Reutlizar color de parrafos*/
+    color: var(--color-parrafo);
+}
+
+.titulo_caract {
+    margin: 0;
+    font-weight: bold;
+}
+
+.parrafo_caract {
+    font-size: 13px;
+    color: var(--color-parrafo);
+}
+
+
+/* Cuadros con la info */
+.cuadros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 40px auto 0px auto;
+    gap: 50px;
+}
+
+.box {
+    flex-basis: 32%;
+    border-radius: 10px;
+    height: 400px;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid var(--gris);
+    border-bottom: 6px solid var(--azul_opaco);
+}
+
+.imagen_titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box_img {
+    width: 230px;
+}
+
+.check {
+    display: flex;
+}
+
+.img_check {
+    width: 20px;
+    margin-right: 8px;
+}
+
+
+/* Sección Roadmap*/
+.titulo_roadmap {
+    text-align: center;
+    font-weight: 600;
+}
+
+.img_roadmap {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Sección Tarifa*/
+.tarifa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descripcion_tarifa {
+    color: var(--color-parrafo);
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.parrafo_tarifa {
+    margin: 8px 0px 8px 0px;
+}
+
+.img_tarifa {
+    width: 300px;
+}
+
+
+/* Footer */
+.titulo_contacto {
+    text-align: center;
+    font-size: 27px;
+}
+
+.contenedor_contacto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img_contacto {
+    width: 530px;
+}
+
+.contacto {
+    text-align: center;
+}
+
+.p_contacto {
+    font-size: 18px;
+}
+
+.icon_contacto {
+    color: var(--azul_opaco);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.background_blue {
+    padding: 12px;
+    background-color: var(--azul_opaco);
+}
+
+.beunik {
+    color: var(--blanco);
+    text-align: center;
+    margin: 0;
+}
+
+
+/* MediaQueries */
+
+@media (max-width: 1061px) {
+    .cuadros {
+        width: 100%;
+    }
+    .p_contacto {
+        width: 300px;
+    }
+}
+
+@media (max-width: 970px) {
+    .img_contacto {
+        display: none;
+    }
+    .contenedor_contacto {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+    .navegacion {
+        left: -100%;
+        height: 100%;
+        background: var(--azul_opaco);
+        justify-content: center;
+        flex-direction: column;
+        transition: none
+    }
+    .contenedor_nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .padding_nav {
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 849px) {
+    .contenedor {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tarifa {
+        flex-direction: column;
+    }
+    .img_tarifa {
+        width: 270px;
+    }
+    .titulo_contacto {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 742px) {
+    .box {
+        flex-basis: 100%;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .parrafo_header {
+        font-size: 13px;
+    }
+    .p_contacto {
+        font-size: 15px;
+    }
+
+    .boton {
+        font-size: 12px;
+        width: 100px;
+        height: 15px;
+    }
+    .titulo_roadmap {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .titulo_contacto {
+        font-size: 20px;
+    }
+    .tarifa {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .titulo_header {
+        font-size: 30px;
+    }
+    .parrafo_header {
+        font-size: 12px;
+    }
+}
+

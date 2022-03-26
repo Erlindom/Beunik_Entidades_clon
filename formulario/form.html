@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beunik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/abe97d8e14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesform.css">
+</head>
+<body>
+
+    
+    <div class="contenedor">
+        <div class="contenedor_formulario">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <!-- Login -->
+            <form id="login" class="formulario">
+                <div class="center_text">
+                    <h1 class="titulo_form">¡Bienvenido de vuelta!</h1>
+                    <p>Entra a tu cuenta</p>
+                </div>
+
+                <div class="form_login">
+                    <!-- Grupo: Correo Login -->
+                    <div class="grupo_formulario">
+                        <div class="grupo_formulario-input">
+                            <i class="fa-regular fa-envelope icon"></i>
+                            <input id="email" type="email" class="input-field" placeholder="Email" required>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Grupo: Contraseña Login -->
+                    <div class="grupo_formulario">
+                        <div class="grupo_formulario-input">
+                            <i class="fa-solid fa-key icon"></i>
+                            <input id="password" type="password" class="input-field" placeholder="Contraseña">    
+                            <p></p>                  
+                        </div>
+                    </div>
+
+                    <!-- Grupo: Checkbox Login -->
+                    <div class="grupo_formulario">
+                        <label class="formulario_label">
+                            <input type="checkbox" name="checkbox" class="check-box">
+                            Mostrar Contraseña
+                        </label>
+                    </div>
+
+                    <!-- Grupo: Olvido de constraseña -->
+                    <div class="grupo_formulario">
+                        <div class="contraseña" >
+                            <a class="link_pass" href="">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+
+                    <!-- Grupo: Botón Login -->
+                    <div class="grupo_formulario">
+                        <button type="submit" id="btn_login" class="submit-btn">Iniciar Sesión</button>
+                    </div>
+                </div>
+            </form>
+
+
+             <!-- Registro -->
+            <form id="register" class="formulario">
+                <div class="center_text">
+                    <h1 class="titulo_form">Regístrate</h1>
+                    <p>Registra tu entidad</p>
+                </div>
+
+                <div class="form_login">
+                    <!-- Grupo: Correo Register -->
+                    <div class="grupo_formulario">
+                        <div class="grupo_formulario-input">
+                            <i class="fa-regular fa-envelope icon"></i>
+                            <input type="email" class="input-field" placeholder="Email">
+                        </div>
+                        <p class="formulario_input-error">Debe de ser un email válido</p>
+                    </div>
+
+                    <!-- Grupo: Contraseña Register -->
+                    <div class="grupo_formulario">
+                        <div class="grupo_formulario-input">
+                            <i class="fa-solid fa-key icon"></i>
+                            <input type="password" class="input-field" placeholder="Contraseña">
+                        </div>
+                    </div>
+
+                    <!-- Grupo: Confirmar Contraseña Register -->
+                    <div class="grupo_formulario">
+                        <div class="grupo_formulario-input">
+                            <i class="fa-solid fa-key icon"></i>
+                            <input type="password" class="input-field" placeholder="Confirmar Contraseña">
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo: Checkbox Contraseña Register -->
+                    <div class="grupo_formulario">
+                        <label class="formulario_label">
+                            <input type="checkbox" name="checkbox" class="check-box">
+                            Mostrar Contraseña
+                        </label>
+                    </div>
+
+                    <!-- Grupo: Checkbox Terminos Register -->
+                    <div class="grupo_formulario">
+                        <label class="formulario_label">
+                            <input type="checkbox" name="checkbox" class="check-box">
+                            Aceptar los <a href="">términos y condiciones</a>
+                        </label>
+                    </div>
+            
+                    <!-- Grupo: Botón Register -->
+                    <div class="grupo_formulario">
+                        <button type="submit" class="submit-btn">Regístrate</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    
+
+
+    <script src="form.js"></script>
+</body>
+</html>
